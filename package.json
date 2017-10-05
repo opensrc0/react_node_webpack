@@ -1,0 +1,16 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.6.0"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC"
+}
