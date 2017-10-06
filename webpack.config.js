@@ -35,14 +35,14 @@ const clientConfig = {
 			// 		}
 			// 	]
 			// },
-			{
-				test: /\.(js|jsx)$/,
-				use: 'babel-loader'
-			}
+			// {
+			// 	test: /\.(js|jsx)$/,
+			// 	use: 'babel-loader'
+			// }
 		]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin(),
+		// new webpack.optimize.UglifyJsPlugin(),
 		new HtmlWebpackPlugin({template: './src/index.html'}) // For SPA direct include js in html
 
 	]
