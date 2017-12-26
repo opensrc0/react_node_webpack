@@ -1,0 +1,22 @@
+{
+  "name": "react_node_webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm install --prefix ./**/",
+    "install": "npm install --prefix ./**/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdlion/react_node_webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdlion/react_node_webpack/issues"
+  },
+  "homepage": "https://github.com/hdlion/react_node_webpack#readme"
+}
