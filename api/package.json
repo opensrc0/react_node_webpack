@@ -14,6 +14,8 @@
     "webpack": "^3.6.0"
   },
   "scripts": {
+    "development": "npm start",
+    "production": "npm run build && npm run serve",
     "start": "nodemon es6server/server.js --exec babel-node --presets env,stage-2",
     "build": "babel es6server -d es5server --presets env,stage-2",
     "serve": "node es5server/server.js",
