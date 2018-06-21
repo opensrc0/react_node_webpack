@@ -1,16 +1,17 @@
 {
-  "apps": [{
-    "name": "3idiots-local",
-    "script": "./build/server/server.js",
-    "watch": "./build/server",
-    "merge_logs": true,
-    "log_date_format" : "YYYY-MM-DD HH:mm Z"
-  }, {
-    "name": "3idiots",
-    "script": "./build/server/server.js",
-    "instances": 2,
-    "exec_mode": "cluster",
-    "merge_logs": true,
-    "log_date_format" : "YYYY-MM-DD HH:mm Z"
-  }]
-}
+    "apps": [{
+      "name": "3idiots-local",
+      "script": "./build/server/server.js",
+      "watch": "./build/server",
+      "merge_logs": true,
+      "log_date_format" : "YYYY-MM-DD HH:mm Z"
+    }, {
+      "name": "3idiots-production",
+      "script": "./build/server/index.js",
+      "instances": 2,
+      "exec_mode": "cluster",
+      "merge_logs": true,
+      "log_date_format" : "YYYY-MM-DD HH:mm Z"
+    }]
+  }
+  
