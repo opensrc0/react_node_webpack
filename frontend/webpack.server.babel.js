@@ -7,32 +7,35 @@ const __APP_ENV__ = process.env.APP_ENV;
 const __APP_PUBLIC_PATH__ = process.env.APP_PUBLIC_PATH;
 const isProd = process.env.NODE_ENV === 'production';
 
-var BUILD_DIR = path.resolve(__dirname, './build/server');
-var APP_DIR = path.resolve(__dirname, './application/server');
+var BUILD_DIR = path.resolve('./build/server');
+var APP_DIR = path.resolve('./application/server');
 
 const config = {
   // Entry point of file, which file need to bundle
   entry:  APP_DIR + '/server.js',
 
+  // Exclude built in package and include extention file like all .css file will be include
+  // If you remove this, package will be include due to that error will come
   externals: [
 		nodeExternals({ whitelist: [/\.css$/] }),
 		/assetsManifest.json/,
 	  ],
 
+  // Mode is development for now
 	mode: 'development',
 
 	output: {
     // Resolve path where needs to be bundle
-    path: path.resolve('./build/server'),
-    
+    path: BUILD_DIR,
+
     // Bundle File name
-		filename: 'server.js',
+    filename: 'server.js',
   },
-  
+
 
   module: {
     rules: [
-      // Transpile .js file es6 to es5 
+      // Transpile .js file es6 to es5 and exclude node_module, we need to include that other wise error will come
       { test: /\.js$/, exclude: /node_modules/, use: [{ loader: 'babel-loader', options: { cacheDirectory: true } }] },
     ],
   },
