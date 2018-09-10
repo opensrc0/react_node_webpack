@@ -17,9 +17,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-react": "^6.24.1",
     "express": "^4.16.3",
     "pm2": "^2.10.4",
     "react": "^16.4.1",
@@ -33,6 +30,9 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "npm-run-all": "^4.1.3",

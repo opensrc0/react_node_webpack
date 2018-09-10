@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 
 const __APP_ENV__ = process.env.APP_ENV;
 const __APP_PUBLIC_PATH__ = process.env.APP_PUBLIC_PATH;
@@ -21,6 +22,11 @@ const config = {
 		contentBase: BUILD_DIR,
 		headers: { 'Access-Control-Allow-Origin': '*' },
 	},
+	plugins: [
+	new webpack.DefinePlugin({
+		__BROWSER__: false,
+	}),
+	],
 };
 
 module.exports = config;

@@ -16,28 +16,28 @@ export default async (req, res) => {
   // RenderToStaring is built-in function to convert react to html form fto make SEO friendly
   // To use of JSX use react in preset in .babelrc
   const app = renderToString(
-      <Router history={history}>
-        <Switch>
-          {
-            routes.map((route, i) => (
-              <Route
-                key={route.key || i}
-                path={route.path}
-                exact={route.exact}
-                strict={route.strict}
-                render={(props) => {
-                  return (
-                    <route.component
-                      {...props}
-                      route={route}
-                    />
-                  );
-                }}
-              />
-            ))
-          }
-        </Switch>
-      </Router>
+    <Router history={history}>
+      <Switch>
+        {
+          routes.map((route, i) => (
+            <Route
+              key={route.key || i}
+              path={route.path}
+              exact={route.exact}
+              strict={route.strict}
+              render={(props) => {
+                return (
+                  <route.component
+                    {...props}
+                    route={route}
+                  />
+                );
+              }}
+            />
+          ))
+        }
+      </Switch>
+    </Router>
   );
 
   const page = renderHtml(

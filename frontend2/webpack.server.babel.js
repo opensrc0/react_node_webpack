@@ -49,6 +49,9 @@ const config = {
 
     // A webpack plugin to remove/clean your build folder(s) before building
     new CleanWebpackPlugin(['./build/server']),
+    new webpack.DefinePlugin({
+      __BROWSER__: false,
+    }),
   ],
 
 }
